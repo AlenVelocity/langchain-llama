@@ -44,7 +44,7 @@ export class LLAMACPP extends LLM {
     public _call = async (prompt: string, _stop: string[]): Promise<string> => {
         if (!this.session) this.newSession()
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        return this.session!.prompt(prompt)
+        return this.session!.prompt(prompt, this.options.stream ? process.stdout.write : undefined)
     }
 
     public _llmType() {

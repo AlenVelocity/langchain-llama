@@ -54,18 +54,15 @@ export class LLAMACPPSession {
                 }
 
                 if (text.includes('>')) {
-                    // console.log('Response starts with >, end of message - Resolving...'); // Debug log: Indicate that the response ends with "\\f"
                     if (cb) cb('<end>')
-                    terminateAndResolve(response) // Remove the trailing "\f" delimiter
+                    terminateAndResolve(response)
                 } else {
                     timeoutId = setTimeout(() => {
-                        // console.log('Timeout reached - Resolving...'); // Debug log: Indicate that the timeout has been reached
                         terminateAndResolve(response)
-                    }, 10000) // Set a timeout of 4000ms to wait for more data
+                    }, 10000)
                 }
                 cb?.(text)
                 response += text
-                // console.log('Updated response:', response); // Debug log: Show the updated response
             }
 
             const onStdoutError = (err: Error) => {
