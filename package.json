@@ -10,8 +10,7 @@
   "scripts": {
     "build": "tsc -p .",
     "lint": "eslint src/**/*.ts",
-    "fmt": "prettier --write src/**/*.ts",
-    "prepare": "npm run build"
+    "fmt": "prettier --write src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -36,5 +35,9 @@
     "eslint": "^8.38.0",
     "prettier": "^2.8.7",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "langchain": "^0.0.51",
+    "rxjs": "^7.8.0"
   }
 }
