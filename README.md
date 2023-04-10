@@ -1,6 +1,6 @@
 # Langchain-LLAMA
 
-# ⚠️ NOT READY FOR PRODUCTION YET ⚠️
+# ⚠️ WIP ⚠️
 
 Run LLAMA LLMs locally in langchain. Ported from [linonetwo/langchain-alpaca](https://github.com/linonetwo/langchain-alpaca)
 
