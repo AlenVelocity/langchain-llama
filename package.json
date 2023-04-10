@@ -1,6 +1,6 @@
 {
   "name": "langchain-llama",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "",
   "main": "build/index.js",
   "files": [
@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc -p .",
     "lint": "eslint src/**/*.ts",
-    "fmt": "prettier --write src/**/*.ts"
+    "fmt": "prettier --write src/**/*.ts",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
