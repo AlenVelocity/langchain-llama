@@ -1,0 +1,40 @@
+{
+  "name": "langchain-llama",
+  "version": "0.0.4",
+  "description": "",
+  "main": "build/index.js",
+  "files": [
+    "build/**/*"
+  ],
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint src/**/*.ts",
+    "fmt": "prettier --write src/**/*.ts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alenvelocity/gpt-functions"
+  },
+  "keywords": [
+    "gpt",
+    "openai",
+    "chatgpt",
+    "gpt4",
+    "javascript",
+    "typescript",
+    "no-code"
+  ],
+  "author": "Alen Yohannan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/common-tags": "^1.8.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  }
+}
