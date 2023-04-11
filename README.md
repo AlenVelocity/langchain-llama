@@ -4,8 +4,12 @@
 
 Run LLAMA LLMs locally in langchain. Ported from [linonetwo/langchain-alpaca](https://github.com/linonetwo/langchain-alpaca)
 
+# Installation
+
 ```shell
-npm i langchain-llama
+# npm i langchain-llama
+# Intall the package from github
+npm i github:alenvelocity/langchain-llama
 ```
 
 # Usage 
