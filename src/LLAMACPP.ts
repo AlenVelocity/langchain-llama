@@ -24,16 +24,17 @@ export class LLAMACPP extends LLM {
         this.newSession()
     }
 
-    public init = this.session?.initialize
+    public init!: typeof LLAMACPPSession.prototype.initialize
 
     private newSession = () => {
         this.closeSession()
-        this.session = new LLAMACPPSession({
+        const session = new LLAMACPPSession({
             bin: this.options.executablePath,
             params: this.options.params ?? [],
             model: this.options.model
         })
-        this.init = this.session?.initialize
+        this.session = session
+        this.init = this.session.initialize
         return true
     }
 
