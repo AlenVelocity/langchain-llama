@@ -39,7 +39,7 @@ export class LLAMACPPSession {
 
     public prompt = (prompt: string, cb?: (s: string) => void): Promise<string> => {
         if (!this.process) {
-            throw new Error('Bot is not initialized.')
+            throw new Error('Session is not initialized.')
         }
 
         if (this.process?.stdin) this.process.stdin.write(prompt + '\n')
